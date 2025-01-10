@@ -136,6 +136,32 @@ export default function Home() {
         "React Native",
       ],
     },
+    {
+      company: "Loggia | Software Engineering",
+      role: "Software Engineer",
+      period: "Sep 2011 to Apr 2020",
+      location: "Belo Horizonte e Região, Brasil · Remote",
+      description:
+        "During my time at <a href='https://loggia.com.br/' target='_blank' rel='noopener noreferrer'><strong>Loggia</strong></a>, I worked with a wide array of technologies, largely driven by our key client, Banco Sicoob. This involved projects ranging from simple websites to complex Facebook apps, online stores, JavaScript animations, and portals. Key projects included building web applications for Sicoob and its partners, developing CRM systems in Drupal, and creating custom solutions using PHP, Laravel, Java, Python, JavaScript, and more. I also developed applications like 'Meu Lanche' and managed card production systems, focusing on scalability and performance.",
+      stack: [
+        "PHP",
+        "Laravel",
+        "Python",
+        "Java",
+        "JavaScript",
+        "AngularJS",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "WordPress",
+        "Drupal",
+        "Joomla",
+        "Ruby on Rails",
+        "MySQL",
+        "React.js",
+        "Vue.js",
+      ],
+    },
   ];
 
   return (
