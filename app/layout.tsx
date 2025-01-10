@@ -22,59 +22,41 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Head>
+          <title>Adelino Masioli - Software Engineer</title>
           <meta
             name="description"
-            content={
-              metadata.description ??
-              "Senior Software Engineer with 13+ years of experience"
-            }
+            content="Senior Software Engineer with 13+ years of experience"
           />
-          <meta
-            name="keywords"
-            content="Software Engineer, Full Stack, React, Next.js"
-          />
+
+          <meta property="og:url" content="https://adelinomasioli.com/" />
+          <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content={String(
-              metadata.title ?? "Adelino Masioli - Software Engineer"
-            )}
+            content="Adelino Masioli - Software Engineer"
           />
           <meta
             property="og:description"
-            content={
-              metadata.description ??
-              "Senior Software Engineer with 13+ years of experience"
-            }
+            content="Senior Software Engineer with 13+ years of experience"
           />
-          <meta property="og:type" content="website" />
-
-          {/* Definindo a imagem de Open Graph e Twitter */}
           <meta
             property="og:image"
             content="https://adelinomasioli.com/adelino-masioli.png"
           />
+
           <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="adelinomasioli.com" />
+          <meta property="twitter:url" content="https://adelinomasioli.com" />
           <meta
             name="twitter:title"
-            content={String(
-              metadata.title ?? "Adelino Masioli - Software Engineer"
-            )}
+            content="Adelino Masioli - Software Engineer"
           />
           <meta
             name="twitter:description"
-            content={
-              metadata.description ??
-              "Senior Software Engineer with 13+ years of experience"
-            }
+            content="Senior Software Engineer with 13+ years of experience"
           />
           <meta
             name="twitter:image"
             content="https://adelinomasioli.com/adelino-masioli.png"
-          />
-
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
           />
         </Head>
 
