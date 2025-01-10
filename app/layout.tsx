@@ -5,12 +5,10 @@ import { Inter } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 
-// Definindo a fonte
 const inter = Inter({ subsets: ["latin"] });
 
-// Definindo os metadados globais
 export const metadata: Metadata = {
-  metadataBase: new URL("https://adelinomasioli.com/"), // Substitua pelo seu URL real
+  metadataBase: new URL("https://adelinomasioli.com/"),
   title: "Adelino Masioli - Software Engineer",
   description: "Senior Software Engineer with 13+ years of experience",
   manifest: "/manifest.json",

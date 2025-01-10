@@ -365,28 +365,35 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-6">Key Skills</h2>
           <div className="flex flex-wrap gap-2">
             {[
-              "JavaScript",
-              "React",
-              "Node.js",
-              "TypeScript",
-              "Next.js",
-              "AWS",
-              "Docker",
-              "PHP",
-              "Laravel",
-              "Symfony",
-              "Python",
-              "PostgreSQL",
-              "MySQL",
-              "GraphQL",
-              "React Native",
-            ].map((skill, index) => (
-              <span
+              {
+                skill: "JavaScript",
+                url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+              },
+              { skill: "React", url: "https://reactjs.org/" },
+              { skill: "Node.js", url: "https://nodejs.org/" },
+              { skill: "TypeScript", url: "https://www.typescriptlang.org/" },
+              { skill: "Next.js", url: "https://nextjs.org/" },
+              { skill: "AWS", url: "https://aws.amazon.com/" },
+              { skill: "Docker", url: "https://www.docker.com/" },
+              { skill: "PHP", url: "https://www.php.net/" },
+              { skill: "Laravel", url: "https://laravel.com/" },
+              { skill: "Symfony", url: "https://symfony.com/" },
+              { skill: "Python", url: "https://www.python.org/" },
+              { skill: "PostgreSQL", url: "https://www.postgresql.org/" },
+              { skill: "MySQL", url: "https://www.mysql.com/" },
+              { skill: "GraphQL", url: "https://graphql.org/" },
+              { skill: "React Native", url: "https://reactnative.dev/" },
+            ].map((item, index) => (
+              <a
                 key={index}
-                className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm"
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                {skill}
-              </span>
+                <span className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm">
+                  {item.skill}
+                </span>
+              </a>
             ))}
           </div>
         </Card>
