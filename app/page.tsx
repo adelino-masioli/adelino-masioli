@@ -115,7 +115,6 @@ export default function Home() {
         "MySQL",
         "PayPal API",
         "Stripe API",
-        "Docker",
       ],
     },
     {
@@ -347,9 +346,9 @@ export default function Home() {
                   dangerouslySetInnerHTML={{ __html: exp.description }}
                 />
                 <div className="flex flex-wrap gap-2">
-                  {exp.stack.map((tech) => (
+                  {exp.stack.map((tech, techIndex) => (
                     <span
-                      key={tech}
+                      key={`${tech}-${techIndex}`}
                       className="px-2 py-1 bg-secondary text-secondary-foreground rounded-full text-xs"
                     >
                       {tech}
@@ -381,9 +380,9 @@ export default function Home() {
               "MySQL",
               "GraphQL",
               "React Native",
-            ].map((skill) => (
+            ].map((skill, index) => (
               <span
-                key={skill}
+                key={index}
                 className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm"
               >
                 {skill}
