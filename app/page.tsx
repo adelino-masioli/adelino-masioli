@@ -15,6 +15,7 @@ import {
   Phone,
   Rss,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const education = [
@@ -178,7 +179,16 @@ export default function Home() {
               <h1 className="text-4xl font-bold mb-2">Adelino Masioli</h1>
               <div className="flex items-center gap-2 text-muted-foreground mb-6">
                 <MapPin className="w-4 h-4" />
-                <span>Vila Nova de Gaia, Portugal</span>
+                <span>
+                  <Link
+                    href="https://www.google.com/maps?q=41.1244,-8.6110"
+                    target="_blank"
+                    title="Vila Nova de Gaia, Portugal"
+                  >
+                    {" "}
+                    Vila Nova de Gaia, Portugal
+                  </Link>
+                </span>
               </div>
 
               <div className="space-y-6">
