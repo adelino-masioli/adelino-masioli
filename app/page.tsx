@@ -145,7 +145,7 @@ export default function Home() {
                     size="sm"
                     className="w-full border-emerald-500 text-emerald-400 hover:bg-emerald-500/10"
                   >
-                   <a href="/Adelino_Lazaro_Ferreira_Masioli_CV.pdf" download>
+                   <a href="/Adelino_Lazaro_Ferreira_Masioli_CV.pdf" download className="flex items-center">
                       <Download className="mr-2 h-4 w-4" /> Download CV
                     </a>
                   </Button>
