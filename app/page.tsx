@@ -508,7 +508,7 @@ export default function Home() {
           <div className="space-y-8">
             {[
               {
-                degree: "Master's in Engineering of Web Technologies and Systems",
+                degree: "Master&apos;s in Engineering of Web Technologies and Systems",
                 institution: "ISLA – Instituto Politécnico de Gestão e Tecnologia (ISLA-IPGT)",
                 location: "Vila Nova de Gaia - PT",
                 year: "September 2024",
@@ -520,7 +520,7 @@ export default function Home() {
                 year: "February 2012 to March 2013",
               },
               {
-                degree: "Bachelor's in Systems Analysis and Development",
+                degree: "Bachelor&apos;s in Systems Analysis and Development",
                 institution: "UNATEC",
                 location: "Belo Horizonte - BR",
                 year: "February 2008 to December 2011",
@@ -562,7 +562,7 @@ export default function Home() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-12 relative">
               <span className="bg-gradient-to-r from-emerald-400 to-teal-500 text-transparent bg-clip-text">
-                Let's Connect
+                Let&apos;s Connect
               </span>
               <span className="absolute -bottom-3 left-0 w-20 h-1 bg-emerald-500"></span>
             </h2>
