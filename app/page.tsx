@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { link } from "fs"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero")
@@ -217,18 +218,21 @@ export default function Home() {
             {[
               {
                 title: "AI-Powered Content Data Platform",
-                description: "Blackrock Health: AI-driven data extraction platform for content.",
+                description: "Evous: AI-enhanced content extraction platform for intelligent data management.",
                 tech: ["Python", "FastAPI", "React", "GraphQL", "+2"],
+                link: "https://evous.ai",
               },
               {
                 title: "Intelligent Document Processing System",
                 description: "Blackrock Health: Website with AI-driven document processing.",
-                tech: ["Drupal", "Bootstrap", "JavaScript", "AWS"],
+                tech: ["Drupal", "Bootstrap", "JavaScript", "AWS", "FHIR"],
+                link: "https://www.blackrockhealth.com/",
               },
               {
                 title: "Headless Website",
-                description: "Interactive website with headless WordPress CMS and NextJS.",
+                description: "Ashford: Interactive website with headless WordPress CMS and NextJS.",
                 tech: ["Next.js", "Tailwind CSS", "WordPress", "MySQL"],
+                link: "https://www.ashfordkitchensandinteriors.co.uk/",
               },
             ].map((project, index) => (
               <motion.div
@@ -259,9 +263,17 @@ export default function Home() {
                   <CardFooter>
                     <Button
                       variant="ghost"
-                      className="text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 p-0"
+                      className="text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 p-0 px-2"
                     >
-                      View Project <ExternalLink className="ml-2 h-4 w-4" />
+                      <a
+                        href={typeof project.link === 'string' ? project.link : '#'}  // Verifica se é uma string válida
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center"
+                      >
+                        View Project
+                        <ExternalLink className="ml-2 h-4 w-4" strokeWidth={1.5} />
+                      </a>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -294,7 +306,7 @@ export default function Home() {
                 location: "Remote",
                 period: "October 2024 to Present",
                 description:
-                  "Led a multidisciplinary team as Tech Lead, architecting and delivering an AI-powered data extraction platform tailored to the healthcare sector. The focus was on leveraging Retrieval-Augmented Generation (RAG) models for intelligent data extraction from hospital records, transforming raw medical data into actionable insights.",
+                  "Led a multidisciplinary team as Tech Lead, architecting and delivering an AI-powered data extraction platform tailored for product and training content generation. The platform leverages advanced Retrieval-Augmented Generation (RAG) models to intelligently extract data from diverse sources, transforming raw information into valuable, actionable insights for product development and training materials.",
               },
               {
                 role: "Software Engineer",
@@ -302,7 +314,7 @@ export default function Home() {
                 location: "Brighton, UK - Remote",
                 period: "September 2021 to October 2024",
                 description:
-                  "Led the development and maintenance of advanced AI-driven data extraction platforms focused on healthcare data, including medical records and patient health information. I architected scalable, high-performance solutions using Python (FastAPI), Node.js (NestJS), AWS, PostgreSQL, and GraphQL.",
+                  "Led the development and maintenance of advanced AI-driven data extraction platforms focused on healthcare data, including medical records and patient health information, for leading companies such as AVT, Johnson & Johnson, Pfizer, and Roche. I architected scalable, high-performance solutions using Python (FastAPI), Node.js (NestJS), AWS, PostgreSQL, and GraphQL, ensuring robust and efficient data processing tailored to the needs of the healthcare industry.",
               },
               {
                 role: "Frontend Web Full-Stack",
@@ -348,7 +360,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-zinc-400 mt-3">{job.description}</p>
-                <Button variant="link" className="text-emerald-400 hover:text-emerald-300 p-0 mt-2">
+                <Button variant="link" className="text-emerald-400 hover:text-emerald-300 p-0 mt-2" onClick={() => scrollToSection("skills")}>
                   View Tech Stack <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </motion.div>
@@ -472,7 +484,7 @@ export default function Home() {
 
             <TabsContent value="mobile" className="mt-0">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["GraphQL", "React Native", "Flutter", "FHIR"].map((skill, index) => (
+                {["GraphQL", "React Native", "Flutter"].map((skill, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -508,22 +520,25 @@ export default function Home() {
           <div className="space-y-8">
             {[
               {
-                degree: "Master&apos;s in Engineering of Web Technologies and Systems",
+                degree: "Master's in Engineering of Web Technologies and Systems", // Usando aspas duplas
                 institution: "ISLA – Instituto Politécnico de Gestão e Tecnologia (ISLA-IPGT)",
                 location: "Vila Nova de Gaia - PT",
                 year: "September 2024",
+                link: "https://www.islagaia.pt/pt/",
               },
               {
                 degree: "Postgraduate Degree in Software Engineering",
                 institution: "UNA",
                 location: "Belo Horizonte - BR",
                 year: "February 2012 to March 2013",
+                link: "https://una.br/",
               },
               {
-                degree: "Bachelor&apos;s in Systems Analysis and Development",
+                degree: "Bachelor's in Systems Analysis and Development", // Usando aspas duplas
                 institution: "UNATEC",
                 location: "Belo Horizonte - BR",
                 year: "February 2008 to December 2011",
+                link: "https://una.br/",
               },
             ].map((edu, index) => (
               <motion.div
@@ -536,6 +551,7 @@ export default function Home() {
               >
                 <div className="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-emerald-500"></div>
                 <div>
+                  {/* Renderizando diretamente o grau de educação (degree) */}
                   <h3 className="text-xl font-semibold text-zinc-100">{edu.degree}</h3>
                   <p className="text-emerald-400">{edu.institution}</p>
                   <div className="flex flex-wrap items-center gap-x-4 text-sm text-zinc-400 mt-1">
@@ -545,11 +561,14 @@ export default function Home() {
                   </div>
                 </div>
                 <Button variant="link" className="text-emerald-400 hover:text-emerald-300 p-0 mt-2">
-                  Visit {edu.institution.split(" ")[0]} website <ExternalLink className="ml-1 h-4 w-4" />
+                  <a href={edu.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                    Visit {edu.institution.split(" ")[0]} website <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
                 </Button>
               </motion.div>
             ))}
           </div>
+
         </section>
 
         {/* Contact */}
